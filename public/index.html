@@ -3,47 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gemini Chatbot</title>
+    <title>Health AI Assistant</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="chat-container">
 
-  <div class="header">
-    <div class="logo">
-        🩺
+    <!-- Header -->
+    <div class="header">
+        <div class="logo">
+            🩺
+        </div>
+
+        <div>
+            <h1>Health AI Assistant</h1>
+            <p>Konsultasi kesehatan berbasis AI</p>
+        </div>
     </div>
 
-    <div>
-        <h1>Health AI Assistant</h1>
-        <p>Konsultasi kesehatan berbasis AI</p>
+    <!-- Disclaimer -->
+    <div class="disclaimer">
+        ⚠️ Informasi yang diberikan AI tidak menggantikan diagnosis atau konsultasi dokter profesional.
     </div>
-</div>
-<form id="chat-form">
-        <textarea
-            id="input2"
-            placeholder="Apa yang anda rasakan sekarang?"
-            rows="1"
-        ></textarea>
 
-      
-    </form>
+    <!-- Chat Messages -->
+    <div id="messages" class="messages">
 
+        <div class="message bot">
+            Halo 👋
+
+            Saya adalah Health AI Assistant.
+
+            Silakan jelaskan keluhan atau pertanyaan kesehatan yang ingin Anda konsultasikan.
+        </div>
+
+    </div>
+
+    <!-- Input Form -->
     <form id="chat-form">
+
         <textarea
             id="input"
-            placeholder="Ketik pesan..."
+            placeholder="Contoh: Saya mengalami sakit kepala sejak pagi..."
             rows="1"
+            required
         ></textarea>
 
         <button type="submit">
             Kirim
         </button>
+
     </form>
 
 </div>
 
 <script src="script.js"></script>
+
 </body>
 </html>
